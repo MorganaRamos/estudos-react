@@ -1,17 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-// import './App.css'
-
 function App() {
-  const [sobrenome, setSobrenome] = useState("Ramos")
-  const morfar = () => {setSobrenome(sobrenome.toLocaleUpperCase())} 
-
+  
   return (
     <>
-      <h1>Morgana</h1>
-     <div>{sobrenome}</div>
-     <button type='button'onClick={morfar}>Aa</button>
+      <div className="container">
+        <h2 className="mt-3 mb-3">Cadastro de filmes</h2>
+        <form  className="row g-3">
+        <div className="col md-12">
+         <label htmlFor="" className="form-label">titulo</label>
+         <input type="text" className="form-control" />
+        </div>
+
+        <div className="col md-12">
+         <label htmlFor="" className="form-label">Sinopse</label>
+         <input type="text" className="form-control" />
+        </div>
+
+        <div className="col md-12">
+         <label htmlFor="" className="form-label">Votos</label>
+         <input type="text" className="form-control" />
+        </div>
+        <button className="btn btn-primary">Adicionar</button>
+        </form>
+      </div>
     </>
   )
 }
